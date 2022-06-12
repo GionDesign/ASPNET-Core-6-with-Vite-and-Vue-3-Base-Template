@@ -1,0 +1,41 @@
+{
+  "name": "vite-base-starter-template",
+  "author": "Sqeel404",
+  "description": "A base vite template with initial base plugins installed",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "prestart": "node ./aspnetcore-https.js",
+    "dev": "yarn format && yarn lint && yarn prestart && vite",
+    "build": "yarn format && yarn lint && yarn prestart && vite build",
+    "serve": "yarn format && yarn lint && vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.6",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.14",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "vee-validate": "^4.5.11",
+    "vue": "^3.2.36",
+    "vue-axios": "^3.4.1",
+    "vue-router": "^4.0.15",
+    "vue3-mq": "^3.1.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.1",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.9"
+  }
+}
