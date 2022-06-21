@@ -100,7 +100,10 @@ Response: `[{"date":"2022-06-13T10:22:03.425049+10:00","temperatureC":10,"temper
 #### Run Docker Container
 
 Running in detached mode:
-`docker run -d -p 3000:80 -p 7053:7053 -e ASPNETCORE_HTTPS_PORT=7053 aspnet-vite`
+`docker run -d -p 7053:5000 aspnet-vite`
 
 Running in live mode within console:
-`docker run --rm -p 3000:80 -p 7053:7053 -e ASPNETCORE_HTTPS_PORT=7053 aspnet-vite`
+`docker run --rm -p 7053:5000 aspnet-vite`
+
+This will run the application on port `7053`
+Once running image go to `http://localhost:7053` and you will have the frontend displayed and the backend accesible using `/api/weatherforecast`

@@ -23,6 +23,8 @@ RUN dotnet publish "/src/aspnet-core-vite-base-template.csproj" -c Release -o /a
 
 FROM base AS runtime
 WORKDIR /app
+ENV ASPNETCORE_URLS=http://+:5000
+ENV ASPNETCORE_HTTP_PORT=5000
 ENV ASPNETCORE_ENVIRONMENT Production
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "aspnet-core-vite-base-template.dll"]
